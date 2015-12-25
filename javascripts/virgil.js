@@ -29,12 +29,6 @@ $(function() {
     small_virgil_image = virgil_image.clone()
     small_virgil_image.appendTo(small_virgil);
 
-
-    // $(".background_virgil").transition({
-    //   scale: [1, 1],
-    //   // translate: [-100, -200],
-    //   duration: 0
-    // })
   }
 
 var destroy = function() {
@@ -47,12 +41,9 @@ var recur_virgil = function() {
   setup();
 
   $(".virgil").transition({
-      scale: [23.3, 23.3],
-      // rotate3d: [1, 0, 0, '4deg'],
-      // rotate3d: [0, 1, 0, '20deg'],
-      rotate3d: [0, 0, 1, '-9.7deg'],
-      translate: [0, 0],
-      duration: 1000,
+      scale: [23, 23],
+      rotate3d: [0,0,1,'-9.5deg'],
+      duration: 5000,
       easing: 'easeInCubic',
       complete: function() {
         recur_virgil();

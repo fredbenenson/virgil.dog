@@ -2,11 +2,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /*background-position: left top;*/
-  /*background-attachment: fixed;*/
-}
-body {
-
 }
 
 .dot {
@@ -26,41 +21,20 @@ body {
   top: 0%;
   left: 50%;
   height: 100%;
-  transform-origin: 6.8909% 43.78%;
-  /*transform: translate(-50%);*/
-}
-
-.background_virgil {
-
-  /*position: fixed;*/
-
-  /*opacity: 0;*/
-  /*top: 0%;*/
-  /*left: 50%;*/
-  /*height: 100%;*/
-  /*transform: translate(-50%);*/
-  /*z-index: 0;*/
-  /*transform: translate(-50%, 28%) scale(7);*/
+  transform-origin: 6.89% 43.78%;
 }
 
 .background_virgil img {
   position: absolute;
-  /*transform: */
-  top: 412px;
-  left: -1226px;
+  top: 400px;
+  left: -1218px;
   transform:
-    scale(8)
-    rotate3d(0,0,1, -9.5deg)
-    ;
-  /*display: none;*/
-  /*opacity: 0;*/
-  /*height: 100%;*/
-  /*width: 100%;*/
+    scale(7.89)
+    rotate3d(0,0,1, -9.5deg);
   z-index: 0;
 }
 
 .big_virgil {
-  /*position: fixed;*/
   top: 0%;
   left: 50%;
   height: 100%;
@@ -73,27 +47,14 @@ body {
 }
 
 .small_virgil {
-  /*top: -200px;*/
   position: absolute;
-  top: -6%;
+  top: -6.03%;
   left: -43.5%;
-/*  transform:
-    rotate3d(1,0,0, 4deg)
-    rotate3d(0,1,0, 20deg)
-    rotate3d(0,0,1, 9.5deg)
-    scaleX(0.043)
-    scaleY(0.043)
-  ;*/
-
   transform:
     rotate3d(0,0,1, 9.5deg)
     scaleX(0.043)
-    scaleY(0.043)
-  ;
-
+    scaleY(0.043);
   background: black;
-  /*top: 20%;*/
-  /*left: 25%;*/
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -101,13 +62,8 @@ body {
 
 .small_virgil img {
   position: absolute;
-
   width: 101%;
   height: 101%;
-  /*left: -50%;*/
-  /*transform: scaleX(0.060) scaleY(0.060);*/
-  /*left: 0;*/
   opacity: 0.8;
-  /*width: 100%;*/
   z-index: 3;
 }
