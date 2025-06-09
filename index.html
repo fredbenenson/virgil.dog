@@ -7,7 +7,201 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: 10;
+      }
+
+      .dot {
+        background: red;
+        position: absolute;
+        top:50%;
+        left:50%;
+        width: 5px;
+        height: 5px;
+        margin-top: -2.5px;
+        margin-left: -2.5px;
+        z-index: 1;
+      }
+
+      .virgil {
+        position: fixed;
+        top: 0%;
+        left: 50%;
+        height: 100%;
+        transform-origin: 6.89% 43.78%;
+      }
+
+      .background_virgil img {
+        position: absolute;
+        top: 400px;
+        left: -1218px;
+        transform:
+          scale(7.89)
+          rotate3d(0,0,1, -9.5deg);
+        z-index: 0;
+      }
+
+      .big_virgil {
+        top: 0%;
+        left: 50%;
+        height: 100%;
+        transform: translate(-50%);
+      }
+
+      .big_virgil img {
+        height: 100%;
+        z-index: 1;
+      }
+
+      .small_virgil {
+        position: absolute;
+        top: -6.03%;
+        left: -43.5%;
+        transform:
+          rotate3d(0,0,1, 9.5deg)
+          scaleX(0.043)
+          scaleY(0.043);
+        background: black;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      .small_virgil img {
+        position: absolute;
+        width: 101%;
+        height: 101%;
+        opacity: 0.8;
+        z-index: 3;
+      }
+
+      .header {
+        position: fixed;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: white;
+        z-index: 100;
+        font-family: 'EB Garamond', serif;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 10em;
+        font-weight: bold;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 5em;
+        font-weight: normal;
+        opacity: 0.8;
+      }
+
+      #virgil-name {
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+      }
+
+      #virgil-name:hover {
+        opacity: 0.7;
+      }
+
+      /* Carousel Modal Styles */
+      .carousel-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .carousel-modal.active {
+        display: flex;
+      }
+
+      .carousel-container {
+        position: relative;
+        width: 95%;
+        max-width: 1200px;
+        height: 90%;
+        max-height: 800px;
+      }
+
+      .carousel-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1001;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel-close:hover {
+        opacity: 0.7;
+      }
+
+      .photo-carousel {
+        width: 100%;
+        height: 100%;
+      }
+
+      .photo-carousel .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .photo-carousel .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .photo-carousel .swiper-pagination-bullet {
+        background: white;
+        opacity: 0.5;
+      }
+
+      .photo-carousel .swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+
+      .photo-carousel .swiper-button-next,
+      .photo-carousel .swiper-button-prev {
+        color: white;
+      }
+
+      .photo-carousel .swiper-button-next:after,
+      .photo-carousel .swiper-button-prev:after {
+        font-size: 20px;
+      }
+    </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src='javascripts/jquery.transit.js'></script>
